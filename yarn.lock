@@ -344,22 +344,22 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@macropygia/vite-plugin-connect-middleware@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@macropygia/vite-plugin-connect-middleware/-/vite-plugin-connect-middleware-0.0.4.tgz#2d10c1945bcde66b9aeba4aafcdc67d5e22565d4"
-  integrity sha512-nASnWAnL2yuhOD51qgn5e/WDAcy+MPPgDePhyCLgGwo2nMWGpAEJtB365pkjCzgWapVTa+bIHePlcFoQYGyY+g==
+"@macropygia/vite-plugin-connect-middleware@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@macropygia/vite-plugin-connect-middleware/-/vite-plugin-connect-middleware-0.0.6.tgz#cf08cfe045433a960d18b73f64a305b059d03917"
+  integrity sha512-qsLj4e2PwFM7C52nJrwPuLUsUKS7emnlHT7nIhKwtTi0V6aOes/JoDM1hH5LFzOJlDtuf8DZ6rV5QJ+7MyRwaw==
 
-"@macropygia/vite-plugin-glob-input@^0.0.13":
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/@macropygia/vite-plugin-glob-input/-/vite-plugin-glob-input-0.0.13.tgz#5d3e369660c36bf2c0d9f6e1cfc75f5104b1093d"
-  integrity sha512-75Gs5ikGj4OlSpD+HH4ciEbdgPA8jA5/06/T6KFxpTxfVey8bxX0kBo8Y7P/AAfM0C+MkjZXugZh6LuOBUiKrw==
+"@macropygia/vite-plugin-glob-input@^0.0.15":
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/@macropygia/vite-plugin-glob-input/-/vite-plugin-glob-input-0.0.15.tgz#5f624f0b9775a14296c90db1443ad5de5d49103b"
+  integrity sha512-NCiTxYGbbmi3zrYEb7RQ+atwCUnFFAEzdkbNe0BjQW9FZ1xC4iwxPxZehAOciTLBrDJCWbzv+DQ9O0ixNhsqHw==
   dependencies:
     fast-glob "^3.2.11"
 
-"@macropygia/vite-plugin-imagemin-cache@^0.0.11":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/@macropygia/vite-plugin-imagemin-cache/-/vite-plugin-imagemin-cache-0.0.11.tgz#f064c8629c785f0331b2f90d1e2e4982065027a1"
-  integrity sha512-zMfCr68n/dTMjcdupH1NyRVcmc+p093xP5PGZKIp7tfzEvv2XcR/ku9RsgqYh3SvqJFFWo1UKT+YuqhixwCXKA==
+"@macropygia/vite-plugin-imagemin-cache@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@macropygia/vite-plugin-imagemin-cache/-/vite-plugin-imagemin-cache-0.1.1.tgz#524376dc59aee312111dcb5d7f01e70edb528f68"
+  integrity sha512-/UcNQarA/tBgGL3mpCzJj2hZaIxs/nFhkzLRx99EI++0xSHaYtqKW3to0K+1DoXr5wrwi9irMCav/RuO+zyFKw==
   dependencies:
     ansis "^1.4.0"
     fast-glob "^3.2.11"
@@ -370,6 +370,7 @@
     imagemin-pngquant "^9.0.2"
     imagemin-svgo "^10.0.1"
     lokijs "^1.5.12"
+    magic-string "^0.26.2"
     p-limit "^4.0.0"
     picomatch "^2.3.1"
     polycrc "^1.1.1"
@@ -2755,9 +2756,9 @@ is-callable@^1.1.4, is-callable@^1.2.7:
   integrity sha512-1BC0BVFhS/p0qtw6enp8e+8OD0UrK0oFLztSjNzhcKA3WDuJxxAPXzPuPtKkjEY9UUoEWlX/8fgKeu2S8i9JTA==
 
 is-core-module@^2.1.0, is-core-module@^2.10.0, is-core-module@^2.5.0, is-core-module@^2.8.1, is-core-module@^2.9.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.10.0.tgz#9012ede0a91c69587e647514e1d5277019e728ed"
-  integrity sha512-Erxj2n/LDAZ7H8WNJXd9tw38GYM3dv8rk8Zcs+jJuxYTW7sozH+SS8NtrSjVL1/vpLvWi1hxy96IzjJ3EHTJJg==
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.11.0.tgz#ad4cb3e3863e814523c96f3f58d26cc570ff0144"
+  integrity sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw==
   dependencies:
     has "^1.0.3"
 
