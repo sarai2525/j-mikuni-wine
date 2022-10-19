@@ -1,6 +1,10 @@
 @use '/assets/styles/global/' as *;
 
 .header {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 12px;
   text-align: center;
   > img {
     display: inline-block;
