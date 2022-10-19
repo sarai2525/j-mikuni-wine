@@ -1,0 +1,43 @@
+.present {
+  padding: 64px 40px;
+  color: #fff;
+  &__campaign {
+    padding-bottom: 70px;
+  }
+  &__heading {
+    font-size: 20px;
+    text-align: center;
+    opacity: 50%;
+  }
+  &__sub-heading {
+    margin-top: 16px;
+    text-align: center;
+    &__eng {
+      font-size: 40px;
+    }
+    &__ja {
+      font-size: 12px;
+    }
+  }
+  &__description {
+    margin-top: 48px;
+    font-size: 20px;
+    text-align: center;
+  }
+  &__detail {
+    margin-top: 32px;
+  }
+  &__product-detail {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 312px; //TODO: wine.js次第でheightの持ち方は変える
+    &__button {
+      width: 100%;
+      padding: 18px;
+      font-size: 14px;
+      text-align: center;
+      border: 1px solid #fff;
+    }
+  }
+}
