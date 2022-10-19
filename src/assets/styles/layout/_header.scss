@@ -1,5 +1,9 @@
 @use '/assets/styles/global/' as *;
 
-header {
-  font-family: monospace;
+.header {
+  text-align: center;
+  > img {
+    display: inline-block;
+    max-width: 100%;
+  }
 }
