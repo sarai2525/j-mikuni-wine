@@ -7,12 +7,17 @@
 }
 
 body {
+  min-height: 100vh;
   // TODO: フォントどうする？
   font-family: 'Baskerville', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', sans-serif;
   font-weight: normal;
   line-height: 1.6;
   letter-spacing: 0.14em;
-  background-color: rgb(45, 45, 45);
+  background-color: $main-color;
+}
+
+main {
+  min-height: 100vh;
 }
 
 ::selection {
