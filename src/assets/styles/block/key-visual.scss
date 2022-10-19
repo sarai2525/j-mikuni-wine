@@ -1,0 +1,33 @@
+@use '/assets/styles/global/' as *;
+
+.key-visual {
+  background-image: url('/public/images/key-visual.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.title {
+  padding: 20px 0 222px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  &__site-name {
+    font-size: 16px;
+  }
+  &__message {
+    font-size: 22px;
+  }
+}
+.kune-kuri {
+  position: relative;
+  text-align: center;
+  &__wine {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.piku-chan {
+  padding-top: 156px;
+  text-align: center;
+}
