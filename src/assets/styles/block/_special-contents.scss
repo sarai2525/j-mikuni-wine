@@ -223,3 +223,104 @@
     }
   }
 }
+.quiz-modal {
+  > div {
+    position: relative;
+    color: #fff;
+    background-color: $main-color;
+  }
+  &__content {
+    display: none;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 2px solid #fff;
+    @include mq-up(lg) {
+      margin-top: 60px;
+      padding-top: 60px;
+    }
+  }
+  &__title,
+  &__question {
+    font-size: 16px;
+  }
+  &__number {
+    font-size: 40px;
+  }
+  &__question {
+    font-weight: bold;
+  }
+  &__answer {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &__description {
+    margin-top: 45px;
+  }
+  ul {
+    @include mq-up(lg) {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      gap: 20px;
+    }
+  }
+  .button {
+    margin-top: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    border-width: 2px;
+    &:last-of-type {
+      margin-top: 10px;
+    }
+    @include mq-up(lg) {
+      flex-basis: calc(100% - 10px);
+      margin-top: 40px;
+      &:last-of-type {
+        margin-top: 40px;
+      }
+    }
+  }
+  > .cancel {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    @include mq-up(lg) {
+      top: 8px;
+      right: 8px;
+    }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1px;
+      height: 30px;
+      background: #fff;
+    }
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
+@media only screen and (min-width: 641px) {
+  .remodal {
+    max-width: 940px !important;
+  }
+}
+
+.remodal-overlay {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+.remodal {
+  @include mq-up(lg) {
+    padding: 50px 95px 80px !important;
+  }
+}

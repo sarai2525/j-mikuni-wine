@@ -1,5 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
-  window.setInterval(() => {
-    document.body.style.borderColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`
-  }, 3000)
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-ignore
+
+import $ from 'jquery'
+$(() => {
+  //クリックで動く
+  $('.js-open-answer').click(function () {
+    $('.js-answer').slideToggle('active')
+  })
 })
