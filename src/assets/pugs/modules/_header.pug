@@ -1,2 +1,26 @@
+-
+  var header = [
+    {
+      text: '賞品',
+      link: 'present'
+    },
+    {
+      text: '応募方法',
+      link: 'apply'
+    },
+    {
+      text: 'C.V.N.Eについて',
+      link: 'about'
+    },
+    {
+      text: 'スペシャルコース',
+      link: 'special-contents'
+    },
+  ]
 header.header
-  img(src='public/images/sp/logo.png')
+  img.is-sp(src='public/images/sp/logo.png')
+  img.is-pc(src='public/images/pc/logo.png')
+  ul.header__link.is-pc
+    each item in header
+      li
+        a(href=`#${item.link}`) #{ item.text }

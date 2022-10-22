@@ -6,8 +6,17 @@
   display: flex;
   padding: 12px;
   text-align: center;
-  > img {
-    display: inline-block;
-    max-width: 100%;
+  @include mq-up(lg) {
+    justify-content: space-between;
+    padding-right: 24px;
+    padding-left: 38px;
+  }
+  &__link {
+    text-align: right;
+    > li {
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+    }
   }
 }
