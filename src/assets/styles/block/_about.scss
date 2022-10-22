@@ -1,0 +1,82 @@
+@use '/assets/styles/global/' as *;
+
+.about {
+  padding: 70px 0 80px;
+  background-color: #111;
+  @include mq-up(lg) {
+    padding-bottom: 160px;
+  }
+  &__title,
+  &__heading {
+    font-size: 20px;
+  }
+  &__title {
+    text-align: center;
+  }
+  &__logo {
+    margin-top: 60px;
+    text-align: center;
+  }
+  &__layout {
+    flex-direction: column;
+    display: flex;
+    margin-top: 60px;
+    &:last-child {
+      margin-top: 120px;
+    }
+    @include mq-up(lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 140px;
+    }
+  }
+  &__image {
+    margin-right: -40px;
+    margin-left: -40px;
+    @include mq-up(lg) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+    > img {
+      width: 100%;
+    }
+  }
+  &__description {
+    margin-top: 40px;
+    @include mq-up(lg) {
+      flex: 50% 1 1;
+      margin-top: 0;
+      padding-left: 120px;
+    }
+  }
+  &__paragraph {
+    margin-top: 40px;
+  }
+  &__amendment {
+    margin-top: 60px;
+    font-size: 10px;
+    &:last-child {
+      margin-top: 20px;
+    }
+  }
+  .button {
+    margin-top: 60px;
+    @include mq-up(lg) {
+      max-width: 350px;
+      margin-top: 120px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  &__layout--oppose {
+    > .about__image {
+      order: 1;
+    }
+    > .about__description {
+      order: 0;
+      padding-right: 120px;
+      padding-left: 0;
+    }
+  }
+}

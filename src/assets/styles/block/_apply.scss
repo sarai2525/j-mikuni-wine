@@ -1,0 +1,45 @@
+@use '/assets/styles/global/' as *;
+
+.apply {
+  text-align: center;
+  background: linear-gradient(180deg, $main-color 0%, $main-color 50%, #111 50%, #111 100%);
+  &__content {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background-color: #7e3f3e;
+  }
+  &__title {
+    font-size: 20px;
+  }
+  &__steps {
+    flex-direction: column;
+    display: flex;
+  }
+  &__step {
+    padding: 50px 0;
+    &:first-child {
+      position: relative;
+      margin-top: 40px;
+      border-top: 1px solid #fff;
+      &:after {
+        @include triangle(10, #fff);
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        display: inline-block;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+    &:last-child {
+      border-bottom: 1px solid #fff;
+    }
+  }
+  &__heading {
+    font-size: 40px;
+  }
+  .button {
+    margin-top: 30px;
+  }
+}

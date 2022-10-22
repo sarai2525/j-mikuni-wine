@@ -1,0 +1,326 @@
+@use '/assets/styles/global/' as *;
+
+.special-contents {
+  padding: 80px 0 160px;
+  @include mq-up(lg) {
+    padding-top: 120px;
+  }
+  &__heading {
+    font-size: 32px;
+    text-align: center;
+    @include mq-up(lg) {
+      font-size: 48px;
+      text-align: left;
+    }
+  }
+  &__description {
+    margin-top: 40px;
+    text-align: center;
+    @include mq-up(lg) {
+      margin-top: 12px;
+      font-size: 24px;
+      text-align: left;
+    }
+  }
+  &__layout {
+    @include mq-up(lg) {
+      justify-content: space-between;
+      display: flex;
+    }
+  }
+  .designation {
+    margin-top: 40px;
+    padding: 20px 25px;
+    background-color: #7e3f3e;
+    @include mq-up(lg) {
+      flex-basis: 556px;
+      align-items: center;
+      display: flex;
+      margin-top: 0;
+      padding: 40px 30px 40px 46px;
+    }
+    > h2 {
+      padding-bottom: 16px;
+      font-size: 16px;
+      text-align: center;
+      border-bottom: 1px solid #fff;
+      @include mq-up(lg) {
+        flex-basis: 30%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 100%;
+        margin-left: -12px;
+        padding-bottom: 0;
+        font-size: 24px;
+        letter-spacing: 24px;
+        border-right: 1px solid #fff;
+        border-bottom: none;
+      }
+    }
+    &__result {
+      margin-top: 16px;
+      @include mq-up(lg) {
+        flex-basis: 70%;
+        flex-direction: column;
+        justify-content: space-between;
+        display: flex;
+        height: 100%;
+        margin-top: 0;
+        padding-left: 40px;
+      }
+    }
+    dl {
+      display: flex;
+      @include mq-up(lg) {
+        font-size: 16px;
+      }
+      > dt {
+        align-items: center;
+        display: inline-flex;
+        &:after {
+          content: '･･･';
+        }
+      }
+    }
+  }
+  &__quiz {
+    overflow-x: scroll;
+    margin-top: 40px;
+    margin-right: -40px;
+    margin-left: -40px;
+    white-space: nowrap;
+    @include mq-up(lg) {
+      margin-top: 58px;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    &__wrap {
+      position: relative;
+      width: 1000px;
+      text-align: center;
+      @include mq-up(lg) {
+        width: auto;
+      }
+      > .gif {
+        position: absolute;
+        z-index: 5;
+        width: 14%;
+        &:hover {
+          > .balloon {
+            display: inline-block;
+          }
+        }
+        .balloon {
+          position: absolute;
+          box-sizing: border-box;
+          display: none;
+          width: 90px;
+          height: 90px;
+          margin: 1.5em 15px 1.5em 0;
+          padding: 0 5px;
+          font-size: 20px;
+          font-weight: bold;
+          color: #fff;
+          line-height: 90px;
+          text-align: center;
+          border-radius: 50%;
+          background: $main-color;
+          &:before {
+            content: '';
+            position: absolute;
+            margin-top: -15px;
+            border: 15px solid transparent;
+            border-left: 15px solid $main-color;
+            transform: rotate(45deg);
+          }
+        }
+      }
+      > .gif01 {
+        top: 391px;
+        left: 354px;
+        z-index: 10;
+        @include mq-down(sm) {
+          top: 346px;
+          left: 317px;
+        }
+        .balloon {
+          top: -65px;
+          &:before {
+            bottom: 8px;
+            left: -8px;
+          }
+        }
+      }
+      > .gif02 {
+        top: 334px;
+        left: 682px;
+        z-index: 10;
+        @include mq-down(sm) {
+          top: 296px;
+          left: 604px;
+        }
+        .balloon {
+          top: -52px;
+          right: -80px;
+          &:before {
+            bottom: 8px;
+            left: -8px;
+          }
+        }
+      }
+      > .gif03 {
+        top: 307px;
+        right: 107px;
+        @include mq-down(sm) {
+          top: 272px;
+          right: 94px;
+        }
+        .balloon {
+          top: -48px;
+          right: -98px;
+          &:before {
+            bottom: 8px;
+            left: -8px;
+          }
+        }
+      }
+      > .gif04 {
+        top: 368px;
+        left: 35px;
+        @include mq-down(sm) {
+          top: 327px;
+          left: 30px;
+        }
+        .balloon {
+          top: -48px;
+          right: -76px;
+          &:before {
+            bottom: 8px;
+            left: -8px;
+          }
+        }
+      }
+      > .gif05 {
+        top: 233px;
+        left: 503px;
+        @include mq-down(sm) {
+          top: 206px;
+          left: 444px;
+        }
+        .balloon {
+          top: -68px;
+          right: -38px;
+          &:before {
+            bottom: 8px;
+            left: -8px;
+          }
+        }
+      }
+    }
+    > img {
+      width: 100%;
+    }
+  }
+}
+.quiz-modal {
+  > div {
+    position: relative;
+    color: #fff;
+    background-color: $main-color;
+  }
+  &__content {
+    display: none;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 2px solid #fff;
+    @include mq-up(lg) {
+      margin-top: 60px;
+      padding-top: 60px;
+    }
+  }
+  &__title,
+  &__question {
+    font-size: 16px;
+  }
+  &__number {
+    font-size: 40px;
+  }
+  &__question {
+    font-weight: bold;
+  }
+  &__answer {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &__description {
+    margin-top: 45px;
+  }
+  ul {
+    @include mq-up(lg) {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      gap: 20px;
+    }
+  }
+  .button {
+    margin-top: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    border-width: 2px;
+    &:last-of-type {
+      margin-top: 10px;
+    }
+    @include mq-up(lg) {
+      flex-basis: calc(100% - 10px);
+      margin-top: 40px;
+      &:last-of-type {
+        margin-top: 40px;
+      }
+    }
+  }
+  > .cancel {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    @include mq-up(lg) {
+      top: 8px;
+      right: 8px;
+    }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1px;
+      height: 30px;
+      background: #fff;
+    }
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
+@media only screen and (min-width: 641px) {
+  .remodal {
+    max-width: 940px !important;
+  }
+}
+
+.remodal-overlay {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+.remodal {
+  @include mq-up(lg) {
+    padding: 50px 95px 80px !important;
+  }
+}

@@ -1,0 +1,61 @@
+-
+  var imgScr = {
+    logo:{
+      sp: {
+        path: `${IMG_PATH_SP}/about-logo.png`
+      },
+      pc: {
+        path: `${IMG_PATH_PC}/about-logo.png`
+      }
+    },
+    brand:{
+      sp: {
+        path: `${IMG_PATH_SP}/about-brand.png`
+      },
+      pc: {
+        path: `${IMG_PATH_PC}/about-brand.png`
+      }
+    },
+    prophet:{
+      sp: {
+        path: `${IMG_PATH_SP}/about-prophet.png`
+      },
+      pc: {
+        path: `${IMG_PATH_PC}/about-prophet.png`
+      }
+    }
+  }
+section#about.about
+  .content.about__content
+    h1.about__title
+      | 世界が認める
+      br.is-sp
+      | スペインワイン・ブランド
+      br
+      | C.V.N.E（クネ）
+    .about__logo
+      img.is-sp(src=`${imgScr.logo.sp.path}`)
+      img.is-pc(src=`${imgScr.logo.pc.path}`)
+    .about__layout
+      .about__image
+        img.is-sp(src=`${imgScr.brand.sp.path}`)
+        img.is-pc(src=`${imgScr.brand.pc.path}`)
+      .about__description
+        h2.about__heading
+          | 世界が認める
+          br
+          | スペインワイン・ブランド
+        p.about__paragraph 「スペイン最高の生産者が造るクラシックリオハ」クネ（Cune）は、IWSC（International Wine & Spirit Competition）2015にて「スペイン最高の生産者」に選ばれた、スペインを代表するワイナリーが造るクラシックリオハです。醸造家はインペリアルを手がけているマリア・ラレア氏で、ワイン・スペクテーター誌が選ぶ世界No1.に輝いたワインの醸造で培われた技術がクネ（Cune）にも注がれています。マリア・ラレア氏はThe Drink Businessより「スペインの女性ワインメーカーTop15」（2017年）にも選出されています。
+    .about__layout.about__layout--oppose
+      .about__image
+        img.is-sp(src=`${imgScr.prophet.sp.path}`)
+        img.is-pc(src=`${imgScr.prophet.pc.path}`)
+      .about__description
+        h2.about__heading
+          | クネ クリアンサは
+          br
+          | スペイン国内での販売金額No.1 !
+        p.about__paragraph Cuneクネは、C.V.N.E.社が設立された当初から存在するブランドであり、その高い品質からスペイン国内で多くの方に長く愛され続けてきたブランドです。そのスタンダードクラスの「クネ クリアンサ」は2014年と2015年にわたり、スペイン市場での「クリアンサ」カテゴリー販売金額No.1を達成しました。
+        p.about__amendment （出展：AC　Nielsen 2015:クリアンサカテゴリー/2014年及び2015年）
+        p.about__amendment ＊クリアンサ：スペイン・リオハDOCaの規定にて樽での1年以上の熟成を含む計2年以上の熟成が義務づけられている。
+    a.button(href='https://www.mikuniwine.co.jp/?mode=grp&gid=2684935#winery_detail', target='__blank') ブランドページはこちらから

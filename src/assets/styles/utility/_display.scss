@@ -1,0 +1,15 @@
+@use '/assets/styles/global/' as *;
+
+.is-pc {
+  display: none;
+  @include mq-up(lg) {
+    display: inline-block;
+  }
+}
+
+.is-sp {
+  display: inline-block;
+  @include mq-up(lg) {
+    display: none;
+  }
+}

@@ -1,5 +1,13 @@
 @use '/assets/styles/global/' as *;
 
-header {
-  font-family: monospace;
+.header {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 12px;
+  text-align: center;
+  > img {
+    display: inline-block;
+    max-width: 100%;
+  }
 }
