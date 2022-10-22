@@ -1,1 +1,57 @@
 @use '/assets/styles/global/' as *;
+
+.terms {
+  padding-top: 120px;
+  padding-bottom: 50px;
+  background-color: #111;
+  .heading {
+    font-size: 24px;
+    text-align: center;
+  }
+  &__description {
+    max-width: 800px;
+    margin: 64px auto;
+    line-height: 1.8;
+    h3 {
+      margin-top: 2em;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    p {
+      margin-top: 1em;
+      font-size: 14px;
+    }
+    a {
+      text-decoration: underline;
+    }
+    ul {
+      margin-top: 1em;
+      padding-left: 1em;
+      font-size: 12px;
+      > li {
+        margin-top: 0.6em;
+        line-height: 1.6;
+        list-style: disc;
+      }
+      + ul {
+        margin-top: 2.2em;
+      }
+    }
+    .list-decimal {
+      padding-left: 1.5em;
+      > li {
+        list-style: decimal;
+      }
+    }
+    .list-amendment {
+      > li {
+        list-style-type: '* ';
+      }
+    }
+  }
+  &__description-title {
+    padding-bottom: 1.5em;
+    font-size: 18px;
+    text-align: center;
+  }
+}
