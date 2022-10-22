@@ -11,6 +11,7 @@ body {
   // TODO: フォントどうする？
   font-family: 'Baskerville', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', sans-serif;
   font-weight: normal;
+  color: #fff;
   line-height: 1.6;
   letter-spacing: 0.14em;
   background-color: $main-color;
@@ -38,6 +39,10 @@ a {
 
 img {
   max-width: 100%;
+}
+
+p {
+  font-size: 14px;
 }
 
 button,

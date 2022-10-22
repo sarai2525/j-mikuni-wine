@@ -23,3 +23,13 @@ $breakpoint-down: (
     @content;
   }
 }
+@mixin arrow($width, $height, $borderWidth, $borderColor) {
+  width: #{$width}px;
+  height: #{$height}px;
+  border-top: #{$borderWidth}px solid $borderColor;
+  border-right: #{$borderWidth}px solid $borderColor;
+}
+@mixin triangle($borderWidth, $borderColor) {
+  border: #{$borderWidth}px solid $borderColor;
+  @include arrow(0, 0, $borderWidth, transparent);
+}
