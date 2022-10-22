@@ -1,7 +1,7 @@
 @use '/assets/styles/global/' as *;
 
 .present {
-  padding: 64px 40px;
+  padding: 64px 0;
   color: #fff;
   @include mq-up(lg) {
     padding-bottom: 115px;
@@ -13,9 +13,7 @@
       display: flex;
     }
   }
-
   &__campaign {
-    padding-bottom: 70px;
     @include mq-up(lg) {
       padding-bottom: 0;
     }
@@ -61,14 +59,27 @@
   }
   &__detail {
     margin-top: 32px;
+    font-size: 14px;
     @include mq-up(lg) {
       font-size: 16px;
-      &--emphasize {
+    }
+    &--emphasize {
+      font-size: 20px;
+      @include mq-up(lg) {
         font-size: 24px;
       }
     }
   }
   &__product-detail {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 312px; //TODO: wine.js次第でheightの持ち方は変える
+    @include mq-up(lg) {
+      min-height: auto;
+    }
+  }
+  &__button-area {
     justify-content: center;
     align-items: center;
     display: flex;

@@ -38,14 +38,18 @@
   position: relative;
   text-align: center;
   &__wine {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @include mq-up() {
+      top: 60%;
+      z-index: 15;
+    }
   }
 }
 .piku-chan {
-  padding-top: 156px;
+  padding-top: 100px;
   text-align: center;
   @include mq-up(lg) {
     justify-content: space-between;
