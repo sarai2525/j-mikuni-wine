@@ -8,13 +8,25 @@
     margin: 0 auto;
     padding: 30px 20px;
     background-color: #7e3f3e;
+    @include mq-up(lg) {
+      padding: 70px 90px;
+    }
   }
   &__title {
     font-size: 20px;
+    @include mq-up(lg) {
+      font-size: 32px;
+    }
   }
   &__steps {
     flex-direction: column;
     display: flex;
+    @include mq-up(lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 40px;
+      margin-top: 80px;
+    }
   }
   &__step {
     padding: 50px 0;
@@ -23,23 +35,64 @@
       margin-top: 40px;
       border-top: 1px solid #fff;
       &:after {
-        @include triangle(10, #fff);
         content: '';
         position: absolute;
         bottom: -20px;
         left: 50%;
         display: inline-block;
-        transform: translate(-50%, -50%) rotate(-45deg);
+        width: 0;
+        height: 0;
+        border-top: 17.3px solid #fff;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        transform: translate(-50%, -50%);
       }
     }
     &:last-child {
       border-bottom: 1px solid #fff;
     }
+    @include mq-up(lg) {
+      flex: 45% 1 1;
+      border-bottom: 1px solid #fff;
+      &:first-child {
+        margin-top: 0;
+        &:after {
+          content: '';
+          top: 50%;
+          left: calc(100% + 28px);
+          width: 0;
+          height: 0;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-left: 17.3px solid #fff;
+          transform: translate(-50%, -50%);
+        }
+      }
+      &:last-child {
+        border-top: 1px solid #fff;
+      }
+    }
   }
   &__heading {
     font-size: 40px;
   }
+  &__detail {
+    margin-top: 20px;
+  }
   .button {
     margin-top: 30px;
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      margin-right: 0.8em;
+      background-image: url('/public/images/sp/twitter-icon.png');
+      background-repeat: no-repeat;
+    }
+    @include mq-up(lg) {
+      margin-top: 50px;
+      font-size: 24px;
+    }
   }
 }
