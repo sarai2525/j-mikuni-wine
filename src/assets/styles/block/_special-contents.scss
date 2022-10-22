@@ -1,7 +1,7 @@
 @use '/assets/styles/global/' as *;
 
 .special-contents {
-  padding-top: 80px;
+  padding: 80px 0 160px;
   @include mq-up(lg) {
     padding-top: 120px;
   }
