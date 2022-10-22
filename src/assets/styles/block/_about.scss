@@ -1,1 +1,51 @@
 @use '/assets/styles/global/' as *;
+
+.about {
+  padding: 70px 0 80px;
+  background-color: #111;
+  &__title,
+  &__heading {
+    font-size: 20px;
+  }
+  &__title {
+    text-align: center;
+  }
+  &__logo {
+    margin-top: 60px;
+    text-align: center;
+  }
+  &__layout {
+    flex-direction: column;
+    display: flex;
+    margin-top: 60px;
+    &:last-child {
+      margin-top: 120px;
+    }
+    @include mq-up(lg) {
+      flex-direction: row;
+    }
+  }
+  &__image {
+    margin-right: -40px;
+    margin-left: -40px;
+    > img {
+      width: 100%;
+    }
+  }
+  &__description {
+    margin-top: 40px;
+  }
+  &__paragraph {
+    margin-top: 40px;
+  }
+  &__amendment {
+    margin-top: 60px;
+    font-size: 10px;
+    &:last-child {
+      margin-top: 20px;
+    }
+  }
+  .button {
+    margin-top: 60px;
+  }
+}

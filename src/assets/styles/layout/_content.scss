@@ -1,6 +1,7 @@
 @use '/assets/styles/global/' as *;
 
 .content {
+  padding: 0 40px;
   @include mq-up(lg) {
     max-width: 1130px;
     margin: 0 auto;
