@@ -3,12 +3,12 @@
 .is-pc {
   display: none;
   @include mq-up(lg) {
-    display: block;
+    display: inline-block;
   }
 }
 
 .is-sp {
-  display: block;
+  display: inline-block;
   @include mq-up(lg) {
     display: none;
   }
