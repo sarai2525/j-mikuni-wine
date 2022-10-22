@@ -12,6 +12,16 @@
       font-size: 48px;
       text-align: left;
     }
+    > span {
+      @include mq-up(lg) {
+        &:after {
+          content: '';
+          display: inline-block;
+          width: 0.4em;
+          height: 1em;
+        }
+      }
+    }
   }
   &__description {
     margin-top: 40px;
