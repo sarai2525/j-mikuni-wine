@@ -95,7 +95,6 @@
       margin-right: 0;
       margin-left: 0;
     }
-
     &__wrap {
       position: relative;
       width: 1000px;
@@ -105,22 +104,69 @@
       }
       > .gif {
         position: absolute;
+        z-index: 5;
         width: 14%;
+        &:hover {
+          > .balloon {
+            display: inline-block;
+          }
+        }
+        .balloon {
+          position: absolute;
+          box-sizing: border-box;
+          display: none;
+          width: 90px;
+          height: 90px;
+          margin: 1.5em 15px 1.5em 0;
+          padding: 0 5px;
+          font-size: 20px;
+          font-weight: bold;
+          color: #fff;
+          line-height: 90px;
+          text-align: center;
+          border-radius: 50%;
+          background: $main-color;
+          &:before {
+            content: '';
+            position: absolute;
+            margin-top: -15px;
+            border: 15px solid transparent;
+            border-left: 15px solid $main-color;
+            transform: rotate(45deg);
+          }
+        }
       }
       > .gif01 {
         top: 391px;
         left: 354px;
+        z-index: 10;
         @include mq-down(sm) {
           top: 346px;
           left: 317px;
+        }
+        .balloon {
+          top: -65px;
+          &:before {
+            bottom: 8px;
+            left: -8px;
+          }
         }
       }
       > .gif02 {
         top: 334px;
         left: 682px;
+        z-index: 10;
         @include mq-down(sm) {
           top: 296px;
           left: 604px;
+        }
+        .balloon {
+          top: -52px;
+          right: -80px;
+          &:before {
+            bottom: 8px;
+            left: -8px;
+          }
         }
       }
       > .gif03 {
@@ -130,6 +176,14 @@
           top: 272px;
           right: 94px;
         }
+        .balloon {
+          top: -48px;
+          right: -98px;
+          &:before {
+            bottom: 8px;
+            left: -8px;
+          }
+        }
       }
       > .gif04 {
         top: 368px;
@@ -138,6 +192,14 @@
           top: 327px;
           left: 30px;
         }
+        .balloon {
+          top: -48px;
+          right: -76px;
+          &:before {
+            bottom: 8px;
+            left: -8px;
+          }
+        }
       }
       > .gif05 {
         top: 233px;
@@ -145,6 +207,14 @@
         @include mq-down(sm) {
           top: 206px;
           left: 444px;
+        }
+        .balloon {
+          top: -68px;
+          right: -38px;
+          &:before {
+            bottom: 8px;
+            left: -8px;
+          }
         }
       }
     }
