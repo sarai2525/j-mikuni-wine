@@ -2,31 +2,154 @@
 
 .special-contents {
   padding-top: 80px;
+  @include mq-up(lg) {
+    padding-top: 120px;
+  }
   &__heading {
     font-size: 32px;
     text-align: center;
+    @include mq-up(lg) {
+      font-size: 48px;
+      text-align: left;
+    }
   }
   &__description {
     margin-top: 40px;
     text-align: center;
+    @include mq-up(lg) {
+      margin-top: 12px;
+      font-size: 24px;
+      text-align: left;
+    }
+  }
+  &__layout {
+    @include mq-up(lg) {
+      justify-content: space-between;
+      display: flex;
+    }
   }
   .designation {
     margin-top: 40px;
     padding: 20px 25px;
     background-color: #7e3f3e;
+    @include mq-up(lg) {
+      flex-basis: 556px;
+      align-items: center;
+      display: flex;
+      margin-top: 0;
+      padding: 40px 30px 40px 46px;
+    }
     > h2 {
       padding-bottom: 16px;
+      font-size: 16px;
       text-align: center;
       border-bottom: 1px solid #fff;
+      @include mq-up(lg) {
+        flex-basis: 30%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 100%;
+        margin-left: -12px;
+        padding-bottom: 0;
+        font-size: 24px;
+        letter-spacing: 24px;
+        border-right: 1px solid #fff;
+        border-bottom: none;
+      }
     }
     &__result {
       margin-top: 16px;
+      @include mq-up(lg) {
+        flex-basis: 70%;
+        flex-direction: column;
+        justify-content: space-between;
+        display: flex;
+        height: 100%;
+        margin-top: 0;
+        padding-left: 40px;
+      }
     }
     dl {
       display: flex;
+      @include mq-up(lg) {
+        font-size: 16px;
+      }
+      > dt {
+        align-items: center;
+        display: inline-flex;
+        &:after {
+          content: '･･･';
+        }
+      }
     }
   }
   &__quiz {
+    overflow-x: scroll;
     margin-top: 40px;
+    margin-right: -40px;
+    margin-left: -40px;
+    white-space: nowrap;
+    @include mq-up(lg) {
+      margin-top: 58px;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    &__wrap {
+      position: relative;
+      width: 1000px;
+      text-align: center;
+      @include mq-up(lg) {
+        width: auto;
+      }
+      > .gif {
+        position: absolute;
+        width: 14%;
+      }
+      > .gif01 {
+        top: 391px;
+        left: 354px;
+        @include mq-down(sm) {
+          top: 346px;
+          left: 317px;
+        }
+      }
+      > .gif02 {
+        top: 334px;
+        left: 682px;
+        @include mq-down(sm) {
+          top: 296px;
+          left: 604px;
+        }
+      }
+      > .gif03 {
+        top: 307px;
+        right: 107px;
+        @include mq-down(sm) {
+          top: 272px;
+          right: 94px;
+        }
+      }
+      > .gif04 {
+        top: 368px;
+        left: 35px;
+        @include mq-down(sm) {
+          top: 327px;
+          left: 30px;
+        }
+      }
+      > .gif05 {
+        top: 233px;
+        left: 503px;
+        @include mq-down(sm) {
+          top: 206px;
+          left: 444px;
+        }
+      }
+    }
+    > img {
+      width: 100%;
+    }
   }
 }

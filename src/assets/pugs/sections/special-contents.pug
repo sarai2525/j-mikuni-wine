@@ -1,23 +1,56 @@
+-
+  var imgSrc = {
+    specialContents: {
+      bg: {
+        path: `${IMG_PATH}/special-content.png`
+      },
+      q1: {
+        path: `${IMG_PATH}/special-content-q1.gif`
+      },
+      q2: {
+        path: `${IMG_PATH}/special-content-q2.gif`
+      },
+      q3: {
+        path: `${IMG_PATH}/special-content-q3.gif`
+      },
+      q4: {
+        path: `${IMG_PATH}/special-content-q4.gif`
+      },
+      q5: {
+        path: `${IMG_PATH}/special-content-q5.gif`
+      },
+    }
+  }
+
 section#special-contents.special-contents
   .content
-    h1.heading.special-contents__heading
-      | SPECIAL
-      br
-      | CONTENTS
-    p.special-contents__description
-      | ～ワインクイズ～
-      br
-      | ビクトールさんを探してクイズに挑戦 !!
-    .designation
-      h2 称号
-      .designation__result
-        dl
-          dt ５問正解・・・
-          dl C.V.N.E.マイスター
-        dl
-          dt ３問正解・・・
-          dl C.V.N.E.プロフェッサー
-        dl
-          dt １問正解・・・
-          dl C.V.N.E.ファン
-    .p.special-contents__quiz
+    .special-contents__layout
+      div
+        h1.heading.special-contents__heading
+          | SPECIAL
+          br.is-sp
+          | CONTENTS
+        p.special-contents__description
+          | ～ワインクイズ～
+          br
+          | ビクトールさんを探してクイズに挑戦 !!
+      .designation
+        h2 称号
+        .designation__result
+          dl
+            dt 5問正解
+            dl C.V.N.E.マイスター
+          dl
+            dt 3問正解
+            dl C.V.N.E.プロフェッサー
+          dl
+            dt 1問正解
+            dl C.V.N.E.ファン
+    .special-contents__quiz
+      .p.special-contents__quiz__wrap
+        img(src=`${imgSrc.specialContents.bg.path}`)
+        img.gif.gif01(src=`${imgSrc.specialContents.q1.path}`)
+        img.gif.gif02(src=`${imgSrc.specialContents.q2.path}`)
+        img.gif.gif03(src=`${imgSrc.specialContents.q3.path}`)
+        img.gif.gif04(src=`${imgSrc.specialContents.q4.path}`)
+        img.gif.gif05(src=`${imgSrc.specialContents.q5.path}`)
