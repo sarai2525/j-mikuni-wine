@@ -9,9 +9,16 @@
     text-align: center;
   }
   &__description {
+    overflow-y: scroll;
     max-width: 800px;
+    height: 600px;
     margin: 64px auto;
+    padding: 20px;
     line-height: 1.8;
+    border: 1px solid #ccc;
+    @include mq-up(md) {
+      padding: 40px;
+    }
     h3 {
       margin-top: 2em;
       font-size: 18px;

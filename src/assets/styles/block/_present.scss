@@ -1,43 +1,135 @@
+@use '/assets/styles/global/' as *;
+
 .present {
-  padding: 64px 40px;
+  padding: 64px 0;
   color: #fff;
+  @include mq-up(md) {
+    position: relative;
+    overflow-x: hidden;
+    padding-top: 270px;
+    padding-bottom: 115px;
+  }
+  &__content {
+    @include mq-up(md) {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      &:before {
+        content: 'PRESENT';
+        position: absolute;
+        top: 100px;
+        right: -40px;
+        font-size: 240px;
+        opacity: 0.1;
+      }
+    }
+  }
+  &__package {
+    position: relative;
+    z-index: 5;
+    @include mq-up(md) {
+      position: static;
+      z-index: auto;
+    }
+  }
   &__campaign {
-    padding-bottom: 70px;
+    @include mq-up(md) {
+      padding-bottom: 0;
+    }
   }
   &__heading {
     font-size: 20px;
     text-align: center;
     opacity: 50%;
+    @include mq-up(md) {
+      text-align: left;
+    }
   }
   &__sub-heading {
     margin-top: 16px;
     text-align: center;
+    @include mq-up(md) {
+      margin-top: 12px;
+      text-align: left;
+    }
     &__eng {
       font-size: 40px;
+      @include mq-up(md) {
+        font-size: 64px;
+      }
     }
     &__ja {
       font-size: 12px;
+      @include mq-up(md) {
+        margin-top: 10px;
+        font-size: 16px;
+      }
     }
   }
   &__description {
+    position: relative;
+    z-index: 5;
     margin-top: 48px;
     font-size: 20px;
     text-align: center;
+    @include mq-up(md) {
+      position: static;
+      z-index: auto;
+      flex: 356px 0 0;
+      margin-top: 0;
+      font-size: 24px;
+      text-align: left;
+    }
   }
   &__detail {
     margin-top: 32px;
+    font-size: 14px;
+    @include mq-up(md) {
+      font-size: 16px;
+    }
+    &--emphasize {
+      font-size: 20px;
+      @include mq-up(md) {
+        font-size: 24px;
+      }
+    }
   }
   &__product-detail {
     justify-content: center;
     align-items: center;
     display: flex;
     min-height: 312px; //TODO: wine.js次第でheightの持ち方は変える
-    &__button {
-      width: 100%;
-      padding: 18px;
-      font-size: 14px;
-      text-align: center;
-      border: 1px solid #fff;
+    @include mq-up(md) {
+      min-height: auto;
     }
+  }
+  &__button-area {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 312px; //TODO: wine.js次第でheightの持ち方は変える
+    @include mq-up(md) {
+      display: block;
+      min-height: auto;
+    }
+  }
+  .button {
+    @include mq-up(md) {
+      max-width: 270px;
+      margin-top: 120px;
+    }
+  }
+}
+.kune-kuri {
+  position: fixed;
+  top: 420px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%) translateY(-50%);
+  @include mq-up(md) {
+    top: 586px;
+    left: 50%;
+    z-index: 15;
+    width: 122px;
   }
 }

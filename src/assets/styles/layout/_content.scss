@@ -2,7 +2,7 @@
 
 .content {
   padding: 0 40px;
-  @include mq-up(lg) {
+  @include mq-up(md) {
     max-width: 1130px;
     margin: 0 auto;
   }

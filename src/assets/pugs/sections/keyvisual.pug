@@ -1,18 +1,18 @@
-section.key-visual
+section.key-visual.js-kv-area
   include /assets/pugs/modules/_header
-  h1.title
-    span.title__site-name 三国ワイン公式Twitter
-    br
-    span.title__site-name フォロー&RTキャンペーン
-    br
-    span.title__message
-      | 抽選で500名様に
-      br
-      | スペイン産ワイン
-      br
-      | “クネ クリアンサ”をプレゼント!
-  .kune-kuri
-    .kune-kuri__wine
-      img(src='/public/images/sp/kunekuri-wine.png', alt='クネ クリアンサ')
-  .piku-chan
-    img(src='/public/images/sp/piku-chan.png', alt='C.V.N.E(クネ)社現在5代目C.E.O ビクトール・ウルティア Victor Urrutia')
+  .content.key-visual__content
+    h1.title
+      .title__site-name 三国ワイン公式Twitter
+      .title__site-name フォロー&RTキャンペーン
+      .title__message
+        | 抽選で500名様に
+        br
+        | スペイン産ワイン
+        br
+        | “クネ クリアンサ”を
+        br.is-pc
+        | プレゼント!
+section.content.piku-chan.js-wine-opacity
+  span.is-pc scroll
+  img.is-sp(src='/public/images/sp/piku-chan.png', alt='C.V.N.E(クネ)社現在5代目C.E.O ビクトール・ウルティア Victor Urrutia')
+  img.is-pc(src='/public/images/pc/piku-chan.png', alt='C.V.N.E(クネ)社現在5代目C.E.O ビクトール・ウルティア Victor Urrutia')

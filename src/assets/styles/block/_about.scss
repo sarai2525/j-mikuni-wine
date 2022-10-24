@@ -3,8 +3,18 @@
 .about {
   padding: 70px 0 80px;
   background-color: #111;
-  @include mq-up(lg) {
+  @include mq-up(md) {
+    position: relative;
+    padding-top: 240px;
     padding-bottom: 160px;
+    &:before {
+      content: 'ABOUT';
+      position: absolute;
+      top: 0;
+      left: -40px;
+      font-size: 240px;
+      opacity: 0.1;
+    }
   }
   &__title,
   &__heading {
@@ -12,6 +22,9 @@
   }
   &__title {
     text-align: center;
+    @include mq-up(md) {
+      font-size: 32px;
+    }
   }
   &__logo {
     margin-top: 60px;
@@ -24,7 +37,7 @@
     &:last-child {
       margin-top: 120px;
     }
-    @include mq-up(lg) {
+    @include mq-up(md) {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -34,7 +47,7 @@
   &__image {
     margin-right: -40px;
     margin-left: -40px;
-    @include mq-up(lg) {
+    @include mq-up(md) {
       margin-right: 0;
       margin-left: 0;
     }
@@ -44,7 +57,7 @@
   }
   &__description {
     margin-top: 40px;
-    @include mq-up(lg) {
+    @include mq-up(md) {
       flex: 50% 1 1;
       margin-top: 0;
       padding-left: 120px;
@@ -59,10 +72,13 @@
     &:last-child {
       margin-top: 20px;
     }
+    @include mq-up(md) {
+      font-size: 12px;
+    }
   }
   .button {
     margin-top: 60px;
-    @include mq-up(lg) {
+    @include mq-up(md) {
       max-width: 350px;
       margin-top: 120px;
       margin-right: auto;
@@ -71,12 +87,16 @@
   }
   &__layout--oppose {
     > .about__image {
-      order: 1;
+      @include mq-up(md) {
+        order: 1;
+      }
     }
     > .about__description {
-      order: 0;
-      padding-right: 120px;
-      padding-left: 0;
+      @include mq-up(md) {
+        order: 0;
+        padding-right: 120px;
+        padding-left: 0;
+      }
     }
   }
 }

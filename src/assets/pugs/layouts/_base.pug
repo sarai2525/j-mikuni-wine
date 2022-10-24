@@ -1,5 +1,5 @@
 -
-  const meta = {}
+  var meta = {}
 
 block vars
 block setting
@@ -34,9 +34,13 @@ html(lang='ja')
       type='text/css',
       href='https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css'
     )
-    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(
+      type='text/javascript',
+      src='https://code.jquery.com/jquery-3.6.1.min.js',
+      integrity='sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=',
+      crossorigin='anonymous'
+    )
     script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js')
-
     // Google tag (gtag.js)
     script(async, src='https://www.googletagmanager.com/gtag/js?id=G-8J96CLGSBJ')
     script.
@@ -47,14 +51,8 @@ html(lang='ja')
       gtag('js', new Date());
 
       gtag('config', 'G-8J96CLGSBJ');
-      $(() => {
-        //クリックで動く
-        $('.js-open-answer').click(function () {
-          $('.js-answer').slideToggle('active');
-        });
-      });
   body
     main
       block body
     include /assets/pugs/modules/_footer
-    //- script(type='module', src='/assets/scripts/main.ts')
+    script(type='module', src='/assets/scripts/main.ts')

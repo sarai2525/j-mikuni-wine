@@ -3,31 +3,66 @@
 .key-visual {
   background-image: url('/public/images/sp/key-visual.png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%, 440px, contain;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  @include mq-up(md) {
+    background-image: url('/public/images/pc/key-visual.png');
+    background-size: 100%, 100%, cover;
+  }
+  &__content {
+    padding: 0 20px;
+    @include mq-up(md) {
+      min-height: 584px;
+    }
+  }
 }
 .title {
-  padding: 8px 0 248px;
-  font-weight: bold;
+  padding: 8px 0 262px;
   color: #fff;
   text-align: center;
+  @include mq-up(md) {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: left;
+  }
   &__site-name {
     font-size: 16px;
+    @include mq-up(md) {
+      font-size: 24px;
+    }
   }
   &__message {
-    font-size: 22px;
-  }
-}
-.kune-kuri {
-  position: relative;
-  text-align: center;
-  &__wine {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 20px;
+    @include mq-up(md) {
+      margin-top: 40px;
+      font-size: 40px;
+    }
   }
 }
 .piku-chan {
-  padding-top: 156px;
+  position: relative;
+  z-index: 5;
+  padding-top: 100px;
   text-align: center;
+  @include mq-up(md) {
+    justify-content: space-between;
+    display: flex;
+    padding-top: 0;
+  }
+  > span {
+    position: relative;
+    margin-top: -20px;
+    writing-mode: vertical-rl;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 9em;
+      left: 6px;
+      display: block;
+      width: 2px;
+      height: 80px;
+      background-color: #fff;
+    }
+  }
 }
