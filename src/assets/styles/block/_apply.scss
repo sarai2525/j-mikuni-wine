@@ -91,7 +91,10 @@
       background-repeat: no-repeat;
     }
     @include mq-up(lg) {
+      max-width: 560px;
       margin-top: 50px;
+      margin-right: auto;
+      margin-left: auto;
       font-size: 24px;
     }
   }

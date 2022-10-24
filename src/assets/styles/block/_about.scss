@@ -72,6 +72,9 @@
     &:last-child {
       margin-top: 20px;
     }
+    @include mq-up(lg) {
+      font-size: 12px;
+    }
   }
   .button {
     margin-top: 60px;

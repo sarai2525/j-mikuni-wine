@@ -9,7 +9,9 @@
     text-align: center;
   }
   &__description {
+    overflow-y: scroll;
     max-width: 800px;
+    height: 600px;
     margin: 64px auto;
     line-height: 1.8;
     h3 {

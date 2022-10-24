@@ -85,6 +85,7 @@
     display: flex;
     min-height: 312px; //TODO: wine.js次第でheightの持ち方は変える
     @include mq-up(lg) {
+      display: block;
       min-height: auto;
     }
   }

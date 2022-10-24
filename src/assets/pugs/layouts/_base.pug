@@ -59,6 +59,9 @@ html(lang='ja')
       $(document).on('closed', '.remodal', function () {
         $('.js-answer').hide();
       });
+      $(document).on('click', '.js-quiz-area', () => {
+        $('.js-icon').hide();
+      });
   body
     main
       block body

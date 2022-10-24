@@ -1,5 +1,6 @@
 @use '/assets/styles/global/' as *;
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Shippori+Mincho:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Shippori+Mincho:wght@400;700&display=swap');
+
 *,
 *:before,
 *:after {
@@ -8,8 +9,6 @@
 
 body {
   min-height: 100vh;
-  // font-family: 'EB Garamond', serif;
-  // font-family: 'Shippori Mincho', serif;
   font-family:
  'EB Garamond',
  'Shippori Mincho',
