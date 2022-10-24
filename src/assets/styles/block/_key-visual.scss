@@ -9,6 +9,14 @@
     background-image: url('/public/images/pc/key-visual.png');
     background-size: 100vw 75vh;
   }
+  .content {
+    &:first-of-type {
+      height: calc(75vh - 124px);
+    }
+    &:last-of-type {
+      height: 25vh;
+    }
+  }
 }
 .title {
   padding: 8px 0 248px;
@@ -27,7 +35,7 @@
     }
   }
   &__message {
-    font-size: 22px;
+    font-size: 20px;
     @include mq-up(lg) {
       margin-top: 40px;
       font-size: 40px;
@@ -35,12 +43,13 @@
   }
 }
 .piku-chan {
+  position: relative;
+  z-index: 5;
   padding-top: 100px;
   text-align: center;
   @include mq-up(lg) {
     justify-content: space-between;
     display: flex;
-    margin-top: 160px;
     padding-top: 0;
   }
   > span {
