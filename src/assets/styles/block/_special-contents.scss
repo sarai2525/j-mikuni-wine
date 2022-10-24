@@ -176,7 +176,7 @@
         top: 391px;
         left: 358px;
         z-index: 10;
-        @include mq-down(sm) {
+        @include mq-down(md) {
           top: 342px;
           left: 314px;
         }
@@ -189,7 +189,7 @@
         top: 334px;
         left: 682px;
         z-index: 10;
-        @include mq-down(sm) {
+        @include mq-down(md) {
           top: 293px;
           left: 598px;
         }
@@ -201,7 +201,7 @@
       > .gif03 {
         top: 307px;
         right: 107px;
-        @include mq-down(sm) {
+        @include mq-down(md) {
           top: 269px;
           right: 94px;
         }
@@ -213,7 +213,7 @@
       > .gif04 {
         top: 368px;
         left: 33px;
-        @include mq-down(sm) {
+        @include mq-down(md) {
           top: 323px;
           left: 30px;
         }
@@ -225,7 +225,7 @@
       > .gif05 {
         top: 231px;
         left: 503px;
-        @include mq-down(sm) {
+        @include mq-down(md) {
           top: 203px;
           left: 441px;
         }
