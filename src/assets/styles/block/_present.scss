@@ -5,6 +5,7 @@
   color: #fff;
   @include mq-up(lg) {
     position: relative;
+    overflow-x: hidden;
     padding-bottom: 115px;
   }
   &__content {

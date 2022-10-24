@@ -136,8 +136,9 @@
       > .gif {
         position: absolute;
         z-index: 5;
-        width: 14%;
+        width: 139px;
         @include mq-up(lg) {
+          width: 160px;
           &:hover {
             > .balloon {
               display: inline-block;
@@ -172,8 +173,8 @@
         }
       }
       > .gif01 {
-        top: 392px;
-        left: 354px;
+        top: 391px;
+        left: 358px;
         z-index: 10;
         @include mq-down(sm) {
           top: 342px;
@@ -211,7 +212,7 @@
       }
       > .gif04 {
         top: 368px;
-        left: 35px;
+        left: 33px;
         @include mq-down(sm) {
           top: 323px;
           left: 30px;
@@ -222,7 +223,7 @@
         }
       }
       > .gif05 {
-        top: 233px;
+        top: 231px;
         left: 503px;
         @include mq-down(sm) {
           top: 203px;
