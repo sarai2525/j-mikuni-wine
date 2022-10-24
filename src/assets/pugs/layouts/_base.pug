@@ -51,18 +51,8 @@ html(lang='ja')
       gtag('js', new Date());
 
       gtag('config', 'G-8J96CLGSBJ');
-      $(() => {
-        $('.js-open-answer').click(function () {
-          $('.js-answer').slideToggle('active');
-        });
-      });
-      $(document).on('closed', '.remodal', function () {
-        $('.js-answer').hide();
-      });
-      $(document).on('click', '.js-quiz-area', () => {
-        $('.js-icon').hide();
-      });
   body
     main
       block body
     include /assets/pugs/modules/_footer
+    script(type='module', src='/assets/scripts/main.ts')
