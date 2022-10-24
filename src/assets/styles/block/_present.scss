@@ -3,20 +3,21 @@
 .present {
   padding: 64px 0;
   color: #fff;
-  @include mq-up(lg) {
+  @include mq-up(md) {
     position: relative;
     overflow-x: hidden;
+    padding-top: 270px;
     padding-bottom: 115px;
   }
   &__content {
-    @include mq-up(lg) {
+    @include mq-up(md) {
       justify-content: space-between;
       align-items: center;
       display: flex;
       &:before {
         content: 'PRESENT';
         position: absolute;
-        top: -20px;
+        top: 100px;
         right: -40px;
         font-size: 240px;
         opacity: 0.1;
@@ -26,13 +27,13 @@
   &__package {
     position: relative;
     z-index: 5;
-    @include mq-up(lg) {
+    @include mq-up(md) {
       position: static;
       z-index: auto;
     }
   }
   &__campaign {
-    @include mq-up(lg) {
+    @include mq-up(md) {
       padding-bottom: 0;
     }
   }
@@ -40,26 +41,26 @@
     font-size: 20px;
     text-align: center;
     opacity: 50%;
-    @include mq-up(lg) {
+    @include mq-up(md) {
       text-align: left;
     }
   }
   &__sub-heading {
     margin-top: 16px;
     text-align: center;
-    @include mq-up(lg) {
+    @include mq-up(md) {
       margin-top: 12px;
       text-align: left;
     }
     &__eng {
       font-size: 40px;
-      @include mq-up(lg) {
+      @include mq-up(md) {
         font-size: 64px;
       }
     }
     &__ja {
       font-size: 12px;
-      @include mq-up(lg) {
+      @include mq-up(md) {
         margin-top: 10px;
         font-size: 16px;
       }
@@ -71,10 +72,11 @@
     margin-top: 48px;
     font-size: 20px;
     text-align: center;
-    @include mq-up(lg) {
+    @include mq-up(md) {
       position: static;
       z-index: auto;
       flex: 356px 0 0;
+      margin-top: 0;
       font-size: 24px;
       text-align: left;
     }
@@ -82,12 +84,12 @@
   &__detail {
     margin-top: 32px;
     font-size: 14px;
-    @include mq-up(lg) {
+    @include mq-up(md) {
       font-size: 16px;
     }
     &--emphasize {
       font-size: 20px;
-      @include mq-up(lg) {
+      @include mq-up(md) {
         font-size: 24px;
       }
     }
@@ -97,7 +99,7 @@
     align-items: center;
     display: flex;
     min-height: 312px; //TODO: wine.js次第でheightの持ち方は変える
-    @include mq-up(lg) {
+    @include mq-up(md) {
       min-height: auto;
     }
   }
@@ -106,13 +108,13 @@
     align-items: center;
     display: flex;
     min-height: 312px; //TODO: wine.js次第でheightの持ち方は変える
-    @include mq-up(lg) {
+    @include mq-up(md) {
       display: block;
       min-height: auto;
     }
   }
   .button {
-    @include mq-up(lg) {
+    @include mq-up(md) {
       max-width: 270px;
       margin-top: 120px;
     }
@@ -120,13 +122,13 @@
 }
 .kune-kuri {
   position: fixed;
-  top: 50%;
+  top: 420px;
   left: 50%;
   text-align: center;
   transform: translateX(-50%) translateY(-50%);
-  @include mq-up(lg) {
-    top: 60%;
-    left: 48%;
+  @include mq-up(md) {
+    top: 586px;
+    left: 50%;
     z-index: 15;
     width: 122px;
   }

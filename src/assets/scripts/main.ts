@@ -33,7 +33,7 @@ $(() => {
     console.log(scrollTopWindow)
     if (IS_MOBILE) {
       const kvArea = $('.js-wine-opacity').offset().top
-      const kv = $('.js-kv')
+      const kv = $('.js-kv-area')
       if (scrollTopWindow + positonByWine >= kvArea) {
         kv.addClass('is-opacity')
         kv.removeClass('is-clearly')

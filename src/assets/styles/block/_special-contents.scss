@@ -2,18 +2,18 @@
 
 .special-contents {
   padding: 80px 0 160px;
-  @include mq-up(lg) {
+  @include mq-up(md) {
     padding-top: 120px;
   }
   &__heading {
     font-size: 32px;
     text-align: center;
-    @include mq-up(lg) {
+    @include mq-up(md) {
       font-size: 48px;
       text-align: left;
     }
     > span {
-      @include mq-up(lg) {
+      @include mq-up(md) {
         &:after {
           content: '';
           display: inline-block;
@@ -26,14 +26,14 @@
   &__description {
     margin-top: 40px;
     text-align: center;
-    @include mq-up(lg) {
+    @include mq-up(md) {
       margin-top: 12px;
       font-size: 24px;
       text-align: left;
     }
   }
   &__layout {
-    @include mq-up(lg) {
+    @include mq-up(md) {
       justify-content: space-between;
       display: flex;
     }
@@ -42,7 +42,7 @@
     margin-top: 40px;
     padding: 20px 25px;
     background-color: #7e3f3e;
-    @include mq-up(lg) {
+    @include mq-up(md) {
       flex-basis: 556px;
       align-items: center;
       display: flex;
@@ -54,7 +54,7 @@
       font-size: 16px;
       text-align: center;
       border-bottom: 1px solid #fff;
-      @include mq-up(lg) {
+      @include mq-up(md) {
         flex-basis: 30%;
         justify-content: center;
         align-items: center;
@@ -70,7 +70,7 @@
     }
     &__result {
       margin-top: 16px;
-      @include mq-up(lg) {
+      @include mq-up(md) {
         flex-basis: 70%;
         flex-direction: column;
         justify-content: space-between;
@@ -82,7 +82,7 @@
     }
     dl {
       display: flex;
-      @include mq-up(lg) {
+      @include mq-up(md) {
         font-size: 16px;
       }
       > dt {
@@ -101,7 +101,7 @@
     margin-right: -40px;
     margin-left: -40px;
     white-space: nowrap;
-    @include mq-up(lg) {
+    @include mq-up(md) {
       position: static;
       margin-top: 58px;
       margin-right: 0;
@@ -113,10 +113,10 @@
       left: 50%;
       z-index: 10;
       transform: translate(-50%, -50%);
-      @include mq-up(lg) {
+      @include mq-up(md) {
         display: none;
       }
-      @include mq-up(lg) {
+      @include mq-up(md) {
         display: none;
       }
     }
@@ -129,31 +129,30 @@
       background-image: url('/public/images/special-content.png');
       background-repeat: no-repeat;
       background-size: contain;
-      @include mq-up(lg) {
-        width: 100%;
+      @include mq-up(md) {
+        width: 1130px;
         height: 640px;
       }
       > .gif {
         position: absolute;
         z-index: 5;
         width: 139px;
-        @include mq-up(lg) {
+        @include mq-up(md) {
           width: 160px;
           &:hover {
             > .balloon {
               display: inline-block;
             }
           }
-          > .balloon {
+          .balloon {
             position: absolute;
             box-sizing: border-box;
-            display: none;
+            display: none !important;
             width: 90px;
             height: 90px;
             margin: 1.5em 15px 1.5em 0;
             padding: 0 5px;
-            font-size: 20px;
-            font-weight: bold;
+            font-size: 12px;
             color: #fff;
             line-height: 90px;
             text-align: center;
@@ -168,6 +167,18 @@
               border: 12px solid transparent;
               border-left: 20px solid #762e2e;
               transform: rotate(11deg);
+            }
+            > span {
+              position: absolute;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              &:first-of-type {
+                top: 35%;
+              }
+              &:last-of-type {
+                top: 65%;
+                font-size: 32px;
+              }
             }
           }
         }
@@ -251,7 +262,7 @@
     margin-top: 40px;
     padding-top: 40px;
     border-top: 2px solid #fff;
-    @include mq-up(lg) {
+    @include mq-up(md) {
       margin-top: 60px;
       padding-top: 60px;
     }
@@ -273,9 +284,10 @@
   }
   &__description {
     margin-top: 45px;
+    font-size: 14px;
   }
   ul {
-    @include mq-up(lg) {
+    @include mq-up(md) {
       justify-content: space-between;
       align-items: center;
       display: flex;
@@ -290,7 +302,7 @@
     &:last-of-type {
       margin-top: 10px;
     }
-    @include mq-up(lg) {
+    @include mq-up(md) {
       flex-basis: calc(100% - 10px);
       margin-top: 40px;
       &:last-of-type {
@@ -305,7 +317,7 @@
     display: block;
     width: 30px;
     height: 30px;
-    @include mq-up(lg) {
+    @include mq-up(md) {
       top: 8px;
       right: 8px;
     }
@@ -337,7 +349,7 @@
   background-color: rgba(0, 0, 0, 0.8) !important;
 }
 .remodal {
-  @include mq-up(lg) {
+  @include mq-up(md) {
     padding: 50px 95px 80px !important;
   }
 }

@@ -3,46 +3,36 @@
 .key-visual {
   background-image: url('/public/images/sp/key-visual.png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%, 440px, contain;
   transition-duration: 0.2s;
   transition-timing-function: ease;
-  @include mq-up(lg) {
-    height: 100vh;
+  @include mq-up(md) {
     background-image: url('/public/images/pc/key-visual.png');
-    background-size: 100vw 75vh;
+    background-size: 100%, 584px;
   }
-  .content {
-    &:first-of-type {
-      @include mq-up(lg) {
-        height: calc(75vh - 124px);
-      }
-    }
-    &:last-of-type {
-      @include mq-up(lg) {
-        height: 25vh;
-      }
-    }
+  &__content {
+    height: 584px;
+    padding: 0 20px;
   }
 }
 .title {
-  padding: 8px 0 248px;
-  font-weight: bold;
+  padding: 8px 0 262px;
   color: #fff;
   text-align: center;
-  @include mq-up(lg) {
+  @include mq-up(md) {
     padding-top: 0;
     padding-bottom: 0;
     text-align: left;
   }
   &__site-name {
     font-size: 16px;
-    @include mq-up(lg) {
+    @include mq-up(md) {
       font-size: 24px;
     }
   }
   &__message {
     font-size: 20px;
-    @include mq-up(lg) {
+    @include mq-up(md) {
       margin-top: 40px;
       font-size: 40px;
     }
@@ -51,9 +41,9 @@
 .piku-chan {
   position: relative;
   z-index: 5;
-  padding-top: 100px;
+  padding-top: 10px;
   text-align: center;
-  @include mq-up(lg) {
+  @include mq-up(md) {
     justify-content: space-between;
     display: flex;
     padding-top: 0;
