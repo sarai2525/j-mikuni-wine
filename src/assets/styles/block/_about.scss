@@ -84,12 +84,16 @@
   }
   &__layout--oppose {
     > .about__image {
-      order: 1;
+      @include mq-up(lg) {
+        order: 1;
+      }
     }
     > .about__description {
-      order: 0;
-      padding-right: 120px;
-      padding-left: 0;
+      @include mq-up(lg) {
+        order: 0;
+        padding-right: 120px;
+        padding-left: 0;
+      }
     }
   }
 }
