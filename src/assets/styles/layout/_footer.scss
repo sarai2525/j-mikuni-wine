@@ -4,14 +4,18 @@
   height: 56px;
   color: #fff;
   text-align: center;
-  background-color: #000;
+  background-color: #111;
+  @include mq-up(lg) {
+    height: auto;
+  }
   &__copyright {
     justify-content: center;
     align-items: center;
     display: flex;
-    width: calc(100% - 40px);
+    max-width: 1130px;
     height: 100%;
     margin: 0 auto;
+    padding: 60px 0;
     border-top: 1px solid rgb(54, 54, 54); // TODO: 色わからんので確認
   }
 }
