@@ -8,10 +8,13 @@
   transition-timing-function: ease;
   @include mq-up(md) {
     background-image: url('/public/images/pc/key-visual.png');
-    background-size: 100%, 584px;
+    background-size: 100%, 100%, cover;
   }
   &__content {
     padding: 0 20px;
+    @include mq-up(md) {
+      min-height: 584px;
+    }
   }
 }
 .title {
