@@ -4,6 +4,8 @@
   background-image: url('/public/images/sp/key-visual.png');
   background-repeat: no-repeat;
   background-size: contain;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
   @include mq-up(lg) {
     height: 100vh;
     background-image: url('/public/images/pc/key-visual.png');
@@ -11,10 +13,14 @@
   }
   .content {
     &:first-of-type {
-      height: calc(75vh - 124px);
+      @include mq-up(lg) {
+        height: calc(75vh - 124px);
+      }
     }
     &:last-of-type {
-      height: 25vh;
+      @include mq-up(lg) {
+        height: 25vh;
+      }
     }
   }
 }

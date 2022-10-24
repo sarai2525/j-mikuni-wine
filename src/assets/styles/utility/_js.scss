@@ -9,3 +9,31 @@
     }
   }
 }
+.js-kv {
+  &.is-opacity {
+    transition-duration: 0.4s;
+    transition-property: filter;
+    transition-timing-function: ease;
+    filter: opacity(0);
+  }
+  &.is-clearly {
+    transition-duration: 0.4s;
+    transition-property: filter;
+    transition-timing-function: ease;
+    filter: opacity(100%);
+  }
+}
+.js-wine {
+  &.is-opacity {
+    transition-duration: 0.1s;
+    transition-property: filter;
+    transition-timing-function: ease;
+    filter: opacity(25%);
+  }
+  &.is-clearly {
+    transition-duration: 0.1s;
+    transition-property: filter;
+    transition-timing-function: ease;
+    filter: opacity(100%);
+  }
+}
