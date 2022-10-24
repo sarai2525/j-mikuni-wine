@@ -4,6 +4,7 @@
   padding: 64px 0;
   color: #fff;
   @include mq-up(lg) {
+    position: relative;
     padding-bottom: 115px;
   }
   &__content {
@@ -11,6 +12,14 @@
       justify-content: space-between;
       align-items: center;
       display: flex;
+      &:before {
+        content: 'PRESENT';
+        position: absolute;
+        top: 0;
+        right: -40px;
+        font-size: 240px;
+        opacity: 0.1;
+      }
     }
   }
   &__campaign {
