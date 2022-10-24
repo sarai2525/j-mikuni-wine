@@ -299,6 +299,9 @@
     font-size: 14px;
     font-weight: bold;
     border-width: 2px;
+    &:hover {
+      cursor: pointer;
+    }
     &:last-of-type {
       margin-top: 10px;
     }
