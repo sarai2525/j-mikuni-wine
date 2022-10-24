@@ -1,0 +1,11 @@
+.js-wine-stop {
+  position: relative;
+  &.is-stop {
+    .js-wine {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+  }
+}

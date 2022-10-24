@@ -105,3 +105,16 @@
     }
   }
 }
+.kune-kuri {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%) translateY(-50%);
+  @include mq-up(lg) {
+    top: 60%;
+    left: 48%;
+    z-index: 15;
+    width: 122px;
+  }
+}
