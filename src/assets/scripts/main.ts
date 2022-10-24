@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-ignore: Object is possibly 'undefined'.
+// @ts-nocheck
 
 import $ from 'jquery'
 import 'remodal'
