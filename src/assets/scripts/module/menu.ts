@@ -1,4 +1,5 @@
 import $ from 'jquery'
+
 const menu = $('.js-menu')
 const menuItem = $('.js-menuitem')
 const ham = $('.js-hamburger')
@@ -15,24 +16,25 @@ export default class Menu {
   openMenu() {
     ham.on('click', () => {
       if (ham.hasClass('is-open')) {
-        ham.removeClass('is-open')
-        menu.removeClass('is-open')
-        body.removeClass('is-fixed')
+        this.removeClass()
         return
       }
-      ham.addClass('is-open')
-      menu.addClass('is-open')
-      body.addClass('is-fixed')
+      this.addClass()
     })
   }
   selectMenuItem() {
-    menuItem.on('click', () => {
-      if (!ham.hasClass('is-open')) {
-        return
-      }
-      ham.removeClass('is-open')
-      menu.removeClass('is-open')
-      body.removeClass('is-fixed')
+    menuItem.on('click', async () => {
+      await this.removeClass()
     })
+  }
+  addClass() {
+    ham.addClass('is-open')
+    menu.addClass('is-open')
+    body.addClass('is-fixed')
+  }
+  removeClass() {
+    ham.removeClass('is-open')
+    menu.removeClass('is-open')
+    body.removeClass('is-fixed')
   }
 }
