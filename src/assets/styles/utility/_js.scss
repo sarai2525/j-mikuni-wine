@@ -37,3 +37,42 @@
     filter: opacity(100%);
   }
 }
+.js-bubble {
+  > .balloon {
+    animation: popup-reverse 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards;
+  }
+  &.is-hover {
+    > .balloon {
+      display: block;
+      animation: popup 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards;
+    }
+  }
+}
+
+/* stylelint-disable keyframe-block-no-duplicate-selectors */
+@keyframes popup {
+  0% {
+    transform: translateX(-30px) translateY(30px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  80%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popup-reverse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  80%,
+  100% {
+    transform: translateX(-30px) translateY(30px) scale(0.8);
+    opacity: 0;
+  }
+}

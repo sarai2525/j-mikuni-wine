@@ -139,15 +139,9 @@
         width: 139px;
         @include mq-up(md) {
           width: 160px;
-          &:hover {
-            > .balloon {
-              display: inline-block;
-            }
-          }
-          .balloon {
+          > .balloon {
             position: absolute;
             box-sizing: border-box;
-            display: none;
             width: 90px;
             height: 90px;
             margin: 1.5em 15px 1.5em 0;
@@ -192,8 +186,8 @@
           left: 314px;
         }
         .balloon {
-          top: -93px;
-          right: -85px;
+          top: -83px;
+          right: -105px;
         }
       }
       > .gif02 {
@@ -205,7 +199,7 @@
           left: 598px;
         }
         .balloon {
-          top: -103px;
+          top: -73px;
           right: -58px;
         }
       }
@@ -217,7 +211,7 @@
           right: 94px;
         }
         .balloon {
-          top: -86px;
+          top: -56px;
           right: -75px;
         }
       }
@@ -229,8 +223,8 @@
           left: 30px;
         }
         .balloon {
-          top: -90px;
-          right: -55px;
+          top: -60px;
+          right: -65px;
         }
       }
       > .gif05 {
@@ -241,8 +235,8 @@
           left: 441px;
         }
         .balloon {
-          top: -108px;
-          right: -10px;
+          top: -68px;
+          right: -40px;
         }
       }
     }
