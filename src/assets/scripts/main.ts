@@ -5,6 +5,7 @@ import $ from 'jquery'
 import Bubble from './module/bubble'
 import Modal from './module/modal'
 import NotifyIcon from './module/notifyIcon'
+import Menu from './module/menu'
 
 const ua = navigator.userAgent
 const isMobile = ua.indexOf('iPhone') > 0 || (ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0)
@@ -13,6 +14,7 @@ $(() => {
   if (isMobile) {
     new NotifyIcon()
   }
+  new Menu()
   new Bubble()
   new Modal()
 
