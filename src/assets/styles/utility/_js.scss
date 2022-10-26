@@ -1,3 +1,5 @@
+@use '/assets/styles/global/' as *;
+
 .js-wine-stop {
   position: relative;
   &.is-stop {
@@ -39,12 +41,16 @@
 }
 .js-bubble {
   > .balloon {
-    animation: popup-reverse 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards;
+    @include mq-up(md) {
+      animation: popup-reverse 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards;
+    }
   }
   &.is-hover {
     > .balloon {
-      display: block;
-      animation: popup 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards;
+      @include mq-up(md) {
+        display: block;
+        animation: popup 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards;
+      }
     }
   }
 }
