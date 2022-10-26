@@ -14,8 +14,8 @@ const isMobile = ua.indexOf('iPhone') > 0 || (ua.indexOf('Android') > 0 && ua.in
 $(() => {
   if (isMobile) {
     new NotifyIcon()
-    new Menu()
   }
+  new Menu()
   new Bubble()
   new Modal()
   new Scroll()
