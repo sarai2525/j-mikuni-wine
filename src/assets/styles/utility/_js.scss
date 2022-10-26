@@ -1,3 +1,5 @@
+@use '/assets/styles/global/' as *;
+
 .js-wine-stop {
   position: relative;
   &.is-stop {
@@ -35,5 +37,101 @@
     transition-property: filter;
     transition-timing-function: ease;
     filter: opacity(100%);
+  }
+}
+.js-bubble {
+  > .balloon {
+    @include mq-up(md) {
+      animation: popup-reverse 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards;
+    }
+  }
+  &.is-hover {
+    > .balloon {
+      @include mq-up(md) {
+        display: block;
+        animation: popup 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards;
+      }
+    }
+  }
+}
+.js-menu {
+  &.is-open {
+    display: flex;
+    > img {
+      flex: 32px 0 0;
+    }
+    > ul {
+      flex: auto 1 1;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    > small {
+      flex: 1em 0 0;
+    }
+  }
+}
+.js-hamburger {
+  &.is-open {
+    > span {
+      &:nth-child(1) {
+        transform: translateY(8px) rotate(-45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: translateY(-8px) rotate(45deg);
+      }
+    }
+  }
+}
+body {
+  &.is-fixed {
+    overflow: hidden;
+  }
+}
+/* stylelint-disable keyframe-block-no-duplicate-selectors */
+@keyframes popup {
+  0% {
+    transform: translateX(-30px) translateY(30px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  80%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popup-reverse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  80%,
+  100% {
+    transform: translateX(-30px) translateY(30px) scale(0.8);
+    opacity: 0;
+  }
+}
+@keyframes menu {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
+@keyframes menu-out {
+  0% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

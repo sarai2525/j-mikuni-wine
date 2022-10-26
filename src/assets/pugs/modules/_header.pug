@@ -13,14 +13,21 @@
       link: 'about'
     },
     {
-      text: 'スペシャルコース',
+      text: 'SPECIAL CONTENTS',
       link: 'special-contents'
     },
   ]
 header.header
   img.is-sp(src='public/images/sp/logo.png')
   img.is-pc(src='public/images/pc/logo.png')
-  ul.header__link.is-pc
-    each item in header
-      li
-        a(href=`#${item.link}`) #{ item.text }
+  .header__hamburger.js-hamburger
+    span
+    span
+    span
+  .header__link.js-menu
+    img.is-sp(src='public/images/sp/logo.png')
+    ul
+      each item in header
+        li.js-menuitem
+          a(href=`#${item.link}`) #{ item.text }
+    small.is-sp ©︎ Mikuni Wine Co.,Ltd.

@@ -1,12 +1,14 @@
 @use '/assets/styles/global/' as *;
 
 .key-visual {
+  padding-top: 56px;
   background-image: url('/public/images/sp/key-visual.png');
   background-repeat: no-repeat;
   background-size: 100%, 440px, contain;
   transition-duration: 0.2s;
   transition-timing-function: ease;
   @include mq-up(md) {
+    padding-top: 156px;
     background-image: url('/public/images/pc/key-visual.png');
     background-size: 100%, 100%, cover;
   }

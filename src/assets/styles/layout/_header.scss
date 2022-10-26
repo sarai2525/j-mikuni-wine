@@ -1,22 +1,113 @@
 @use '/assets/styles/global/' as *;
 
 .header {
+  position: absolute;
+  top: 0;
+  z-index: 25;
   justify-content: center;
   align-items: center;
   display: flex;
+  width: 100vw;
+  height: 56px;
   padding: 12px;
   text-align: center;
   @include mq-up(md) {
     justify-content: space-between;
+    height: 156px;
     padding-right: 24px;
     padding-left: 38px;
   }
   &__link {
-    text-align: right;
-    > li {
-      &:not(:first-child) {
-        margin-top: 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    overflow-y: scroll;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 12px 5% 40px;
+    background-color: $main-color;
+    > ul {
+      > li {
+        font-size: 20px;
+        &:not(:first-child) {
+          margin-top: 50px;
+        }
+        &:last-child {
+          &:after {
+            content: '〜ワインクイズ〜';
+            display: block;
+            font-size: 18px;
+          }
+        }
       }
+    }
+    @include mq-up(md) {
+      position: static;
+      z-index: auto;
+      overflow: auto;
+      display: block;
+      width: auto;
+      height: auto;
+      padding: 0;
+      text-align: right;
+      background: none;
+      > ul {
+        > li {
+          font-size: 14px;
+          &:not(:first-child) {
+            margin-top: 8px;
+          }
+          &:last-child {
+            &:after {
+              content: '〜ワインクイズ〜';
+              display: block;
+              font-size: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__hamburger {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 25;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    display: block;
+    width: 40px;
+    height: 34px;
+    cursor: pointer;
+    > span {
+      position: absolute;
+      left: 50%;
+      display: inline-block;
+      width: 70%;
+      height: 1px;
+      border-top: 2px solid #fff;
+      border-radius: 4px;
+      transform: translate(-50%, -50%);
+      transition: all 0.2s;
+      opacity: 0.6;
+      &:nth-child(1) {
+        top: 10px;
+      }
+      &:nth-child(2) {
+        top: 18px;
+      }
+      &:nth-child(3) {
+        bottom: 6px;
+      }
+    }
+    @include mq-up(md) {
+      display: none;
     }
   }
 }
