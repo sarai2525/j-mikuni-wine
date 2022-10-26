@@ -162,18 +162,18 @@
               border-left: 20px solid #762e2e;
               transform: rotate(11deg);
             }
-            span {
-              @include mq-up(md) {
-                position: absolute;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                &:first-of-type {
-                  top: 35%;
-                }
-                &:last-of-type {
-                  top: 65%;
-                  font-size: 32px;
-                }
+          }
+          span {
+            @include mq-up(md) {
+              position: absolute;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              &:first-of-type {
+                top: 35%;
+              }
+              &:last-of-type {
+                top: 65%;
+                font-size: 32px;
               }
             }
           }
