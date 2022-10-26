@@ -30,18 +30,20 @@ $(() => {
     const border = stopAt.offset().top + stopAt.outerHeight()
     const kvArea = $('.js-wine-opacity').offset().top
     const kv = $('.js-kv-area')
-    if (scrollTopWindow + positonByWine >= kvArea) {
-      kv.addClass('is-opacity')
-      kv.removeClass('is-clearly')
-      wine.addClass('is-opacity')
-      wine.removeClass('is-clearly')
-    }
-    if (scrollTopWindow < 1) {
-      if (wine.hasClass('is-opacity')) {
-        kv.addClass('is-clearly')
-        kv.removeClass('is-opacity')
-        wine.addClass('is-clearly')
-        wine.removeClass('is-opacity')
+    if (isMobile) {
+      if (scrollTopWindow + positonByWine >= kvArea) {
+        kv.addClass('is-opacity')
+        kv.removeClass('is-clearly')
+        wine.addClass('is-opacity')
+        wine.removeClass('is-clearly')
+      }
+      if (scrollTopWindow < 1) {
+        if (wine.hasClass('is-opacity')) {
+          kv.addClass('is-clearly')
+          kv.removeClass('is-opacity')
+          wine.addClass('is-clearly')
+          wine.removeClass('is-opacity')
+        }
       }
     }
     // スクロール量とワインの下端が停止位置に達した場合の処理
