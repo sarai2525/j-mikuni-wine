@@ -87,6 +87,7 @@
   }
   &__detail {
     margin-top: 20px;
+    font-size: 16px;
     @include mq-up(md) {
       margin-top: 0;
       text-align: left;
